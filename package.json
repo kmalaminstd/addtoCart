@@ -1,0 +1,14 @@
+{
+  "name": "cartproject",
+  "version": "1.0.0",
+  "description": "Add to cart project",
+  "main": "assets/js/main.js",
+  "scripts": {
+    "start": "json-server --watch db.json"
+  },
+  "author": "km alamin",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}

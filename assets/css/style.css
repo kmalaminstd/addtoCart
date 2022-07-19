@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    position: relative;
+}
+
+.cart{
+    display: block;
+    height: 50px;
+    width: auto;
+    float: right;
+    position: fixed;
+    right: 15px;
+    top: 70px;
+}
+
+.cart:hover{
+    cursor: pointer;
+}
+
+.cart .cart-image{
+    width: 50px;
+    height: auto;
+}
+
+.cart .cart-image img{
+    width: 100%;
+    height: auto;
+}
+
+.quantitys{
+    margin-bottom: -26px;
+    margin-left: -8px;
+    border: 1px solid black;
+    padding: 0.5px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.quantitys p{
+    text-align: center;
+}
+
+header{
+    background-color: rgb(216, 216, 216);
+    
+}
+
+.inner-header, .inner-hero-area{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.hero-area{
+    margin-top: 25px;
+    background-color: rgb(216, 216, 216);
+}
+
+.inner-hero-area .heading-area{
+    margin: 30px 0 50px 0;
+}
+
+.heading-area h1{
+    font-weight: 300;
+    font-size: 60px;
+}
+
+.heading-area p{
+    word-spacing: 9px;
+}
+
+.inner-products-area{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.category-products{
+    width: 100%;
+    display: block;
+    
+    padding: 20px 0;
+}
+
+.phone-category, .laptop-category{
+    border-top: 1px solid #f3e4e4;
+    margin-top: 40px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* max-width: 32%; */
+    width: 32%;
+    float: left;
+    margin: 0 0.5% 10px 0.5%;
+    text-align: center;
+    font-family: arial;
+  }
+
+  .clearify{
+    content: '';
+    clear: both;
+    display: table;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+
+  
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+  /* cart css */
+
+.addcarted{
+    display: none;
+    width: 700px;
+    position: absolute;
+    
+    top: 50px;
+    right: 70px;
+}
+
+.carted{
+    margin-right: 70px;
+    position: fixed;
+    z-index: 9999;
+    background-color: #fff;
+    box-shadow: 0px 2px 2px 4px #e9e1e1;
+
+  }
+
+  .close{
+    cursor: pointer;
+    font-size: 18px;
+  }
