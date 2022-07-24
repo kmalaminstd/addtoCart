@@ -142,9 +142,13 @@ header{
     display: none;
     width: 700px;
     position: absolute;
-    
     top: 50px;
     right: 70px;
+}
+
+.addcarted section{
+    height: 300px;
+    overflow: scroll;
 }
 
 .carted{
@@ -160,3 +164,8 @@ header{
     cursor: pointer;
     font-size: 18px;
   }
+
+.productImg{
+    width: 255px;
+}
+
