@@ -106,6 +106,9 @@ const productUi = new ProductInUi();
 
 class InitializeElem{
     async initialize(){
+
+        let productNumber = 1;
+
         const {productCartDivElem, cartClickElem, productAddedToCart} = uiinit.allSelectors();
         const {productCardBtn, productId} = await productUi.productsShowToUi()
         const allProducts = await product.productApiFetch()
@@ -119,10 +122,14 @@ class InitializeElem{
                         const tbody = document.createElement('tbody');
                         tbody.classList.add = 'productBody'
 
+                        
+
                         const productElem = `
-                        <div id="${elem.id}">
-                        <td data-th="Product" id="${elem.id}">
-                        <p hidden class="prdouctElemId">${elem.id}</p>
+                        <div id="pId">
+                            <p hidden>${elem.id}</p>
+                        </div>
+                            <td data-th="Product" id="${elem.id}">
+                            <p hidden class="prdouctElemId">${elem.id}</p>
                                           <div class="row">
                                               <div class="col-md-3 text-left productImg">
                                                    <img src="${elem.image_url}" height="100" width="auto" alt="product image" class="img-fluid d-none d-md-block rounded mb-2 shadow "> 
@@ -135,7 +142,7 @@ class InitializeElem{
                                       </td>
                                        <td data-th="Price" class="productPrice">${elem.price}</td> 
                                        <td data-th="Quantity" class="productQuantity">
-                                          <input type="number" class="form-control form-control-lg text-center" value="1">
+                                          <input type="number" class="form-control form-control-lg text-center" value="${productNumber}">
                                       </td>
                                       <td class="actions" data-th="">
                                           <div class="text-right">
@@ -144,30 +151,29 @@ class InitializeElem{
                                                   <i class="fas fa-trash"></i>
                                               </button>
                                           </div>
-                                      </td>
-                        </div>
+                                      </td>                      
                         `
-
+                        console.log(document.querySelectorAll('#pId p')[i]);
                         tbody.innerHTML = productElem
 
                         productAddedToCart.appendChild(tbody)
-
-                        
-                        const prodId = document.querySelectorAll('.prdouctElemId')
 
                         const productDelBtn = document.querySelectorAll('.productDelBtn')
 
                         for(let i = 0; i < productDelBtn.length; i++){
                             productDelBtn[i].addEventListener('click', ()=>{
                                 // tbody.setAttribute('hidden', '')
-                                console.log(tbody.childNodes[i].nextSibling)
+                                // console.log(tbody.childNodes[i].nextSibling)
+                                console.log(document.querySelectorAll('table tbody tr')[i]);
+                                document.querySelectorAll('table tbody tr')[i].style.display = 'none'
                                 console.log(productAddedToCart);
                             })
-                        }
-                        
-                       
-                        
+                        }                                                                    
                     }
+
+                    const prodId = document.querySelectorAll('.prdouctElemId')[i]
+                    console.log();
+
                 })
                 
             })
